@@ -1,0 +1,248 @@
+name: edu_p4c
+description: "A new Flutter project."
+# The following line prevents the package from being accidentally published to
+# pub.dev using `flutter pub publish`. This is preferred for private packages.
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+# The following defines the version and build number for your application.
+# A version number is three numbers separated by dots, like 1.2.43
+# followed by an optional build number separated by a +.
+# Both the version and the builder number may be overridden in flutter
+# build by specifying --build-name and --build-number, respectively.
+# In Android, build-name is used as versionName while build-number used as versionCode.
+# Read more about Android versioning at https://developer.android.com/studio/publish/versioning
+# In iOS, build-name is used as CFBundleShortVersionString while build-number is used as CFBundleVersion.
+# Read more about iOS versioning at
+# https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
+# In Windows, build-name is used as the major, minor, and patch parts
+# of the product and file versions while build-number is used as the build suffix.
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.7.0
+
+flutter_icons:
+  android: true
+  ios: true
+  image_path: "assets/logo.png"
+
+
+# Dependencies specify other packages that your package needs in order to work.
+# To automatically upgrade your package dependencies to the latest versions
+# consider running `flutter pub upgrade --major-versions`. Alternatively,
+# dependencies can be manually updated by changing the version numbers below to
+# the latest version available on pub.dev. To see which dependencies have newer
+# versions available, run `flutter pub outdated`.
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # The following adds the Cupertino Icons font to your application.
+  # Use with the CupertinoIcons class for iOS style icons.
+  cupertino_icons: ^1.0.8
+  flutter_localization: ^0.3.1
+  flutter_localizations:
+    sdk: flutter
+  youtube_player_iframe: ^5.2.1
+  youtube_player_flutter: ^9.1.1
+  turn_page_transition: ^0.4.0
+  url_launcher: ^6.3.1
+  flutter_launcher_icons: ^0.14.3
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  # The "flutter_lints" package below contains a set of recommended lints to
+  # encourage good coding practices. The lint set provided by the package is
+  # activated in the `analysis_options.yaml` file located at the root of your
+  # package. See that file for information about deactivating specific lint
+  # rules and activating additional ones.
+  flutter_lints: ^5.0.0
+
+# For information on the generic Dart part of this file, see the
+# following page: https://dart.dev/tools/pub/pubspec
+
+# The following section is specific to Flutter packages.
+flutter:
+
+  # The following line ensures that the Material Icons font is
+  # included with your application, so that you can use the icons in
+  # the material Icons class.
+  uses-material-design: true
+
+  # To add assets to your application, add an assets section, like this:
+  assets:
+    - assets/splashscreen.png
+    - assets/books_icon.png
+    - assets/girlreadbook.png
+    - assets/lesson1.png
+    - assets/lesson2.png
+    - assets/lesson3.png
+    - assets/littleboy.png
+    - assets/platon.png
+    - assets/platonandfemale.png
+    - assets/platonask.png
+    - assets/platonwelcome.png
+    - assets/schoolteacher.png
+    - assets/woman.png    
+    - assets/youngboy.png
+    - assets/art_adult_lesson.png
+    - assets/art_lesson.png
+    - assets/existence_lesson.png
+    - assets/freedom_adult_lesson.png
+    - assets/happines_lesson.png
+    - assets/identity_lesson.png
+    - assets/information_lesson.png
+    - assets/kids_art_lesson.png
+    - assets/kids_clean_lesson.png
+    - assets/kids_dream_lesson.png
+    - assets/kids_edu_lessons.png
+    - assets/kids_enjoy_lesson.png
+    - assets/kids_freedom_lesson.png
+    - assets/kids_help_lesson.png
+    - assets/kids_time_lesson.png
+    - assets/kids_whoiam_lesson.png
+    - assets/knowledge_lesson.png
+    - assets/knowledge_adult_lesson.png
+    - assets/language_lesson.png
+    - assets/law_lesson.png
+    - assets/metaphysic_lesson.png
+    - assets/mind_lesson.png
+    - assets/morality_lesson.png
+    - assets/political_lesson.png
+    - assets/realty_lesson.png
+    - assets/religion_lesson.png
+    - assets/responsibility_lesson.png
+    - assets/science_lesson.png
+    - assets/technology_lesson.png
+    - assets/lesson_card1.png
+    - assets/lesson_card2.png
+    - assets/lesson_card3.png
+    - assets/activity1.png
+    - assets/activity2.png
+    - assets/activity3.png
+    - assets/booklet/advancedlevel_Page_1.jpg
+    - assets/booklet/advancedlevel_Page_2.jpg
+    - assets/booklet/advancedlevel_Page_3.jpg
+    - assets/booklet/advancedlevel_Page_4.jpg
+    - assets/booklet/advancedlevel_Page_5.jpg
+    - assets/booklet/interminatedlevel_Page_1.jpg
+    - assets/booklet/interminatedlevel_Page_2.jpg
+    - assets/booklet/interminatedlevel_Page_3.jpg
+    - assets/booklet/beginnerlevel_Page_1.jpg
+    - assets/booklet/beginnerlevel_Page_2.jpg
+    - assets/booklet/beginnerlevel_Page_3.jpg
+    - assets/booklet/advanced1.jpg
+    - assets/booklet/beginner1.jpg
+    - assets/booklet/interminated1.jpg
+    - assets/activity/activities_for_kids_Page_01.jpg
+    - assets/activity/activities_for_kids_Page_02.jpg
+    - assets/activity/activities_for_kids_Page_03.jpg
+    - assets/activity/activities_for_kids_Page_04.jpg
+    - assets/activity/activities_for_kids_Page_05.jpg
+    - assets/activity/activities_for_kids_Page_06.jpg
+    - assets/activity/activities_for_kids_Page_07.jpg
+    - assets/activity/activities_for_kids_Page_08.jpg
+    - assets/activity/activities_for_kids_Page_09.jpg
+    - assets/activity/activities_for_kids_Page_10.jpg
+    - assets/activity/activities_for_kids_Page_11.jpg
+    - assets/activity/activities_for_kids_Page_12.jpg
+    - assets/activity/activities_for_kids_Page_13.jpg
+    - assets/activity/activities_for_kids_Page_14.jpg
+    - assets/activity/activities_for_kids_Page_15.jpg
+    - assets/activity/activities_for_kids_Page_16.jpg
+    - assets/activity/activities_for_kids_Page_17.jpg
+    - assets/activity/activities_for_kids_Page_18.jpg
+    - assets/activity/activities_for_kids_Page_19.jpg
+    - assets/activity/activities_for_kids_Page_20.jpg
+    - assets/activity/activities_for_kids_Page_21.jpg
+    - assets/activity/activities_for_kids_Page_22.jpg
+    - assets/activity/activities_for_kids_Page_23.jpg
+    - assets/activity/activities_for_kids_Page_24.jpg
+    - assets/activity/activities_for_kids_Page_25.jpg
+    - assets/activity/activities_for_kids_Page_26.jpg
+    - assets/activity/intermediate_activity_Page_01.jpg
+    - assets/activity/intermediate_activity_Page_02.jpg
+    - assets/activity/intermediate_activity_Page_03.jpg
+    - assets/activity/intermediate_activity_Page_04.jpg
+    - assets/activity/intermediate_activity_Page_05.jpg
+    - assets/activity/intermediate_activity_Page_06.jpg
+    - assets/activity/intermediate_activity_Page_07.jpg
+    - assets/activity/intermediate_activity_Page_08.jpg
+    - assets/activity/intermediate_activity_Page_09.jpg
+    - assets/activity/intermediate_activity_Page_10.jpg
+    - assets/activity/advanced_activity_Page_1.jpg
+    - assets/activity/advanced_activity_Page_2.jpg
+    - assets/activity/advanced_activity_Page_3.jpg
+    - assets/activity/advanced_activity_Page_4.jpg
+    - assets/activity/advanced_activity_Page_5.jpg
+    - assets/activity/advanced_activity_Page_6.jpg
+    - assets/activity/advanced_activity_Page_7.jpg
+    - assets/activity/advanced_activity_Page_8.jpg
+    - assets/activity/advanced_activity_Page_9.jpg
+    - assets/activity/advanced_activity1.jpeg
+    - assets/activity/advanced_activity2.jpeg
+    - assets/activity/advanced_activity3.jpeg
+    - assets/activity/advanced_activity4.jpeg
+    - assets/activity/advanced_activity5.jpeg
+    - assets/activity/advanced_activity6.jpeg
+    - assets/activity/intermediate_activity1.jpeg
+    - assets/activity/intermediate_activity2.jpeg
+    - assets/activity/intermediate_activity3.jpeg
+    - assets/activity/intermediate_activity4.jpeg
+    - assets/activity/intermediate_activity5.jpeg
+    - assets/activity/activity1.jpg
+    - assets/activity/activity2.jpg
+    - assets/activity/activity3.jpg
+    - assets/activity/activity4.jpg
+    - assets/activity/activity5.jpg
+    - assets/activity/activity6.jpg
+    - assets/activity/activity7.jpg
+    - assets/activity/books/books_for_kids_tr_Page_01.jpg
+    - assets/activity/books/books_for_kids_tr_Page_02.jpg
+    - assets/activity/books/books_for_kids_tr_Page_03.jpg
+    - assets/activity/books/books_for_kids_tr_Page_04.jpg
+    - assets/activity/books/books_for_kids_tr_Page_05.jpg
+    - assets/activity/books/books_for_kids_tr_Page_06.jpg
+    - assets/activity/books/books_for_kids_tr_Page_07.jpg
+    - assets/activity/books/books_for_kids_tr_Page_08.jpg
+    - assets/activity/books/books_for_kids_tr_Page_09.jpg
+    - assets/activity/books/books_for_kids_tr_Page_10.jpg
+    - assets/activity/books/books_for_kids_tr_Page_11.jpg
+    - assets/activity/books/books.jpg
+    - assets/teacher/video_thumb1.png
+    - assets/teacher/video_thumb2.png
+    - assets/teacher/video_thumb3.png
+    - assets/teacher/video_thumb4.png
+    - assets/teacher/video_thumb5.png
+    - assets/teacher/video_thumb6.png
+    - assets/teacher/video_thumb7.png
+    - assets/teacher_blog.png
+    - assets/teacher_blog2.png
+    - assets/teacher_blog3.png
+  # An image asset can refer to one or more resolution-specific "variants", see
+  # https://flutter.dev/to/resolution-aware-images
+
+  # For details regarding adding assets from package dependencies, see
+  # https://flutter.dev/to/asset-from-package
+
+  # To add custom fonts to your application, add a fonts section here,
+  # in this "flutter" section. Each entry in this list should have a
+  # "family" key with the font family name, and a "fonts" key with a
+  # list giving the asset and other descriptors for the font. For
+  # example:
+  # fonts:
+  #   - family: Schyler
+  #     fonts:
+  #       - asset: fonts/Schyler-Regular.ttf
+  #       - asset: fonts/Schyler-Italic.ttf
+  #         style: italic
+  #   - family: Trajan Pro
+  #     fonts:
+  #       - asset: fonts/TrajanPro.ttf
+  #       - asset: fonts/TrajanPro_Bold.ttf
+  #         weight: 700
+  #
+  # For details regarding fonts from package dependencies,
+  # see https://flutter.dev/to/font-from-package
