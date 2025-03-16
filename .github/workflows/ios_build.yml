@@ -2,32 +2,26 @@ name: Build iOS IPA
 
 on:
   push:
-    branches: [ main ]
+    branches:
+      - main
   pull_request:
-    branches: [ main ]
+    branches:
+      - main
 
 jobs:
   build:
     runs-on: macos-latest
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
+    - uses: actions/checkout@v2
 
-      - name: Install Flutter
-        uses: subosito/flutter-action@v2
-        with:
-          flutter-version: '3.10.5'  # Kullandığınız Flutter sürümünü belirtin
+    - name: Setup Dart
+      uses: dart-lang/setup-dart@v1
+      with:
+        sdk: '>=3.7.0 <4.0.0'
 
-      - name: Get Flutter packages
-        run: flutter pub get
+    - name: Install dependencies
+      run: dart pub get
 
-      # iOS release build (codesigning olmadan)
-      - name: Build iOS Release (No Codesign)
-        run: flutter build ios --release --no-codesign
-
-      # IPA oluşturmak için (Flutter 3.7+ ile kullanılabilir)
-      - name: Build IPA
-        run: flutter build ipa --export-method ad-hoc --no-codesign
-
-      # IPA dosyasını arşivlemek veya yüklemek için ek adımlar ekleyebilirsiniz.
+    - name: Build
+      run: flutter build ipa
