@@ -3,19 +3,20 @@ name: Build iOS App
 on:
   push:
     branches:
-      - main
+      - main  # Sadece "main" branch'e push yapıldığında çalışır
 
 jobs:
   build-ios:
-    runs-on: macos-latest  # macOS kullanmak zorunlu
+    runs-on: macos-latest  # macOS gereklidir
+
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Setup Flutter
         uses: subosito/flutter-action@v2
         with:
-          flutter-version: '3.29'  # Güncel Flutter versiyonunu kullan
+          flutter-version: '3.29.0'
 
       - name: Install Dependencies
         run: flutter pub get
@@ -28,8 +29,8 @@ jobs:
           flutter build ipa --release \
             --export-options-plist=ios/Runner/ExportOptions.plist
 
-      - name: Upload iOS Build
-        uses: actions/upload-artifact@v3
+      - name: Upload iOS Build as Artifact
+        uses: actions/upload-artifact@v4  # <- Sürüm "v4" olacak!
         with:
           name: ios-app
           path: build/ios/ipa/*.ipa
