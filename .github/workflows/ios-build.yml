@@ -13,6 +13,15 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
+      - name: Install CocoaPods
+        run: |
+          sudo gem install cocoapods
+          cd ios && pod install --repo-update
+          - name: Disable Code Signing for CI/CD
+          run: |
+            export CODE_SIGNING_REQUIRED=NO
+            export CODE_SIGNING_ALLOWED=NO          
+
       - name: Setup Flutter
         uses: subosito/flutter-action@v2
         with:
@@ -24,9 +33,12 @@ jobs:
       - name: Setup Xcode
         run: sudo xcode-select --switch /Applications/Xcode.app/Contents/Developer
 
+      - name: Check Xcode Version
+        run: xcodebuild -version  
+
       - name: Build iOS App
         run: |
-          flutter build ipa --release \
+          flutter build ipa --release --verbose \
             --export-options-plist=ios/Runner/ExportOptions.plist
 
       - name: Upload iOS Build as Artifact
