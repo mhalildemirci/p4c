@@ -17,8 +17,9 @@ jobs:
         run: |
           sudo gem install cocoapods
           cd ios && pod install --repo-update
-          - name: Disable Code Signing for CI/CD
-          run: |
+
+      - name: Disable Code Signing for CI/CD
+        run: |
             export CODE_SIGNING_REQUIRED=NO
             export CODE_SIGNING_ALLOWED=NO          
 
