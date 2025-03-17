@@ -13,11 +13,6 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
-      - name: Install CocoaPods
-        run: |
-          sudo gem install cocoapods
-          cd ios && pod install --repo-update
-
       - name: Disable Code Signing for CI/CD
         run: |
             export CODE_SIGNING_REQUIRED=NO
